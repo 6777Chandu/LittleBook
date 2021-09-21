@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+// Imports : Resets, Variables
+@import "./app/theme/scss/resets.scss";
+@import "./app/theme/scss/variables.scss";
+
+body {
+  background-color: $bg-color-blog-lists;
+}
+// .wrapper {
+//   // display: grid;
+//   // grid-template-columns: 1fr 2fr 3fr;
+//   display: flex;
+// }

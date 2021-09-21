@@ -1,0 +1,26 @@
+// Import : Variables
+@import "../../../theme/scss/variables.scss";
+
+section {
+  display: grid;
+  justify-content: center;
+  height: 100vh;
+
+  app-logo {
+    margin-top: 50px;
+  }
+  app-filters {
+    align-self: center;
+  }
+  app-sidebar-menu {
+    margin-bottom: 60px;
+    align-self: end;
+  }
+}
+.theme-light {
+  background-color: #fff;
+}
+.theme-dark {
+  color: #fff;
+  background-color: $bg-sidebar-dark;
+}
