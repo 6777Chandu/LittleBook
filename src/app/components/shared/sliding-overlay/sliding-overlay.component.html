@@ -10,6 +10,7 @@
       'theme-dark': themeColor === 'dark'
     }"
   >
+  <!-- //Use component factory to place components inside this -->
     <ng-container [ngSwitch]="overlayType">
       <div *ngSwitchCase="members">
         <app-members></app-members>

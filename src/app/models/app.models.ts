@@ -1,3 +1,4 @@
+// Take a look at https://google.github.io/styleguide/tsguide.html#identifiers
 export interface blogPosts {
   title: string;
   details: string;

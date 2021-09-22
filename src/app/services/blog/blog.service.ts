@@ -9,6 +9,7 @@ import { ApiService } from '../api/api.service';
 })
 export class BlogService {
   constructor(private apiService: ApiService) {}
+  //Lets name it blogs or bloglist? to make it more easy to deduce what the content is
   items:Subject<blogPosts[]> = new Subject<blogPosts[]>();
 
   /**
@@ -19,11 +20,15 @@ export class BlogService {
       .fetchAPI(environment.HOST_BLOGS)
       .toPromise()
       .then((data) => {
+        //This can be moved to a function setBlogPosts. This way any other component/function can trigger change in blogslist
         this.items.next(data);
         console.log(data);
       })
-      .catch(() => {
+      .catch((error) => {
         console.log('Promise rejected with errors');
+        //Use console.error , always console the error so that we can trace the reason for error.
+        //It would be nice to append Component/Service & function name like below
+        // console.error('BlogService: fetchBlogPosts - error',error);
       });
   }
 }
