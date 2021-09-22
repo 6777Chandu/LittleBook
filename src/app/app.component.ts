@@ -11,6 +11,8 @@ export class AppComponent implements OnInit {
   showSlidingOverlay: boolean;
 
   ngOnInit() {
+    // It is good to move this to a service. Use a behaviour subject to trigger opening of the modal
+    //Always assign to subscripiton variable and unsubscribe it on ondestroy
     this.slidingOverlay.showSlidingOverlay.subscribe(
       (data) => (this.showSlidingOverlay = data)
     );

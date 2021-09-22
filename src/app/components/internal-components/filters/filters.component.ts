@@ -22,6 +22,8 @@ export class FiltersComponent implements OnInit {
     };
 
     const fetchFilters = this.apiService
+    // CONSTANTS??
+    // Demo comments had included to move API calls to services
       .fetchAPI('https://jsonmockserver.vercel.app/api/blogs')
       .toPromise();
 

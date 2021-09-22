@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './blog-lists.component.html',
   styleUrls: ['./blog-lists.component.scss']
 })
+// Blogslist or BlogLists ?
 export class BlogListsComponent implements OnInit {
 
   constructor() { }
