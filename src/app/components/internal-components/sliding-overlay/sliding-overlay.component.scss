@@ -1,3 +1,6 @@
+// Import : variables
+@import "../../../theme/scss/variables.scss";
+
 .alertbox-wrapper {
   position: fixed;
   width: 100vw;
@@ -5,12 +8,25 @@
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 50;
 
+  .outside {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .theme-light {
+    background-color: $bg-sliding-overlay-light;
+  }
+  .theme-dark {
+    color: #fff;
+    background-color: $bg-sliding-overlay-dark;
+  }
+
   .alert-slider {
     position: absolute;
     right: 0;
     width: 25%;
     height: 100vh;
-    background-color: #fff;
     padding: 50px;
 
     .border-line-top {

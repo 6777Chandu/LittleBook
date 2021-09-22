@@ -1,0 +1,15 @@
+// import: variables
+@import "../../../theme/scss/variables.scss";
+
+section {
+  ul {
+    li {
+        padding: 8px 0;
+      font: {
+        size: 16px;
+        weight:400;
+      }
+      cursor: pointer;
+    }
+  }
+}

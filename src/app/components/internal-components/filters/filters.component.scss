@@ -1,0 +1,86 @@
+// import: variables
+@import "../../../theme/scss/variables.scss";
+
+section {
+  h3 {
+    font: {
+      size: 20px;
+      weight: 400;
+    }
+    padding: 10px 0;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  .form-group {
+    display: block;
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 25px;
+    cursor: pointer;
+    font: {
+      family: $font-headings;
+      size: 16px;
+      weight: 400;
+    }
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  /* Hide the browser's default checkbox */
+  .form-group input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    height: 22px;
+    width: 22px;
+    background-color: transparent;
+    border: 1px solid #b354b7;
+    border-radius: 5px;
+  }
+
+  /* On mouse-over, add a grey background color */
+  .form-group:hover input ~ .checkmark {
+    background-color: transparent;
+  }
+
+  /* When the checkbox is checked, add a blue background */
+  .form-group input:checked ~ .checkmark {
+    background-color: #b354b7;
+  }
+
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  /* Show the checkmark when checked */
+  .form-group input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  /* Style the checkmark/indicator */
+  .form-group .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 3px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
