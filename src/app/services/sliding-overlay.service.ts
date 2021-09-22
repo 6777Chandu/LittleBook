@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-
+// Place this inside a folder similar to other services
 @Injectable({
   providedIn: 'root',
 })
