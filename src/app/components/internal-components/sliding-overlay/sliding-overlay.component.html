@@ -4,8 +4,10 @@
   <div
     class="alert-slider alert-box-slider animate__animated"
     [ngClass]="{
-      animate__slideInRight: isDisplaying,
-      animate__slideOutRight: !isDisplaying
+      'animate__slideInRight': isDisplaying,
+      'animate__slideOutRight': !isDisplaying,
+      'theme-light': themeColor === 'light',
+      'theme-dark': themeColor === 'dark'
     }"
   >
     <p>

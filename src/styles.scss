@@ -1,9 +1,17 @@
-// Imports : Resets, Variables
+// Imports : Resets, Variables, Google Fonts
 @import "./app/theme/scss/resets.scss";
 @import "./app/theme/scss/variables.scss";
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;300;400;500;600&family=Roboto+Slab:wght@200;300;400;500;600&display=swap');
 
 body {
   background-color: $bg-color-blog-lists;
+  font: {
+   family: $font-default;
+   weight:300;
+   size: 18px;
+  }
+
+    
 }
 // .wrapper {
 //   // display: grid;

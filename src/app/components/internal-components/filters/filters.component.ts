@@ -14,26 +14,23 @@ export class FiltersComponent implements OnInit {
   items = [];
   itemFilters: string[] = [];
   filterSubscription: Subscription;
-  itemFiltersHolder = [];
+  itemFiltersHolder: string[] = [];
 
   ngOnInit(): void {
     const unique = (value, index, self) => {
       return self.indexOf(value) === index;
     };
 
-    const fetchFilters = this.apiService
-    // CONSTANTS??
-    // Demo comments had included to move API calls to services
-      .fetchAPI('https://jsonmockserver.vercel.app/api/blogs')
-      .toPromise();
-
-    fetchFilters
+    this.apiService
+      .fetchAPI(environment.HOSTS_LINK)
+      .toPromise()
       .then((data) => {
         this.items = data;
 
         this.items.map((data) => this.itemFiltersHolder.push(data.type));
         this.itemFilters = this.itemFiltersHolder.filter(unique);
-        console.log('Hi', this.itemFilters);
+        this.itemFilters.reverse();
+        // console.log('Hi', this.itemFilters);
       })
       .catch((error) => {
         console.log('Promise rejected with errors');
