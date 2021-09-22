@@ -15,6 +15,7 @@
 
     .border-line-top {
       margin: 30px 0;
+      //Colors should be from variables scss file
       border-top: 1px solid rgba(0, 0, 0, 0.08);
     }
 
@@ -24,6 +25,7 @@
       margin-bottom: 30px;
     }
     h1 {
+      //Im not sure if I understood this. please explain it when we catchup
       font: {
         size: 30px;
         weight: 500;
@@ -32,6 +34,7 @@
       margin-bottom: 30px;
     }
     h2 {
+      //Font szes/margin/padding in rem
       font-size: 25px;
       margin-bottom: 5px;
     }

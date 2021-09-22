@@ -5,7 +5,10 @@ section {
   display: grid;
   justify-content: center;
   height: 100vh;
-
+// Never assign styles to component tags. use div tags and give styles to them
+// Try to use rem in this exerise. 
+// Width/Height can also be in %,vh,vw
+// Padding and margin would be only in rem
   app-logo {
     margin-top: 50px;
   }
