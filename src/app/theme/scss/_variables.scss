@@ -1,0 +1,37 @@
+// DONE: Most projects, we name these files as _reset.scss and _variables.scss.
+//The _ is added to denote that they are imported into another scss file and not under style.scss file.
+
+// Fonts Family
+$font-default: "IBM Plex Sans", sans-serif;
+$font-headings: "Roboto Slab", serif;
+
+// Default theme color
+$theme-color: #b354b7;
+
+// Light and Dark Themes
+
+$font-color-theme-dark: #fff;
+
+// Sidebar
+$bg-sidebar-light: #fff;
+$bg-sidebar-dark: #041d2e;
+
+// Checkbox
+$checkmark-color: #fff;
+
+// Blog List
+$bg-color-blog-list-light: #f5f6fa;
+$bg-color-blog-list-dark: #000;
+
+// Slding Overlay
+$bg-sliding-overlay-light: #fff;
+$bg-sliding-overlay-dark: #010a0e;
+$bg-overlay: rgba(0, 0, 0, 0.5);
+
+// Members
+$location-color-dark: #b1b4b5;
+
+// Search Bar
+$search-input-bg-light: #ebecf3;
+$search-input-bg-dark: #041d2e;
+$search-input-placeholder-light-textColor: #95969a;

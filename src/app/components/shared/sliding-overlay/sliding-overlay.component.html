@@ -1,0 +1,25 @@
+<!-- DONE: Would overlay-wrapper be more meaningful. Alertbox is a totally different type of component -->
+<!-- DONE: Checkout material or bootstrap to see what alert box means in general -->
+<div class="overlay-wrapper" (click)="onClose()">
+  <div
+    class="overlay-slider alert-box-slider animate__animated"
+    [ngClass]="{
+      animate__slideInRight: isDisplaying,
+      animate__slideOutRight: !isDisplaying,
+      'theme-light': themeColor === 'light',
+      'theme-dark': themeColor === 'dark'
+    }"
+  >
+    <ng-container [ngSwitch]="overlayType">
+      <div *ngSwitchCase="members">
+        <app-members></app-members>
+      </div>
+      <div *ngSwitchCase="addBlogPost">
+        <app-add-blog-post></app-add-blog-post>
+      </div>
+    </ng-container>
+  </div>
+</div>
+<!-- ./ alert-box -->
+
+<!-- ./ alertbox-wrapper -->

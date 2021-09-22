@@ -1,7 +1,14 @@
 <app-sliding-overlay *ngIf="showSlidingOverlay"></app-sliding-overlay>
+
 <div class="wrapper">
-  <app-sidebar-container></app-sidebar-container>
-  <app-blog-lists></app-blog-lists>
-  <app-blog-details></app-blog-details>
+  <div class="app-sidebar-container-class">
+    <app-sidebar-container></app-sidebar-container>
+  </div>
+  <div class="app-blog-list-class">
+    <app-blog-list></app-blog-list>
+  </div>
+  <div class="app-blog-details-class">
+    <app-blog-details></app-blog-details>
+  </div>
 </div>
 <!-- ./ wrapper -->

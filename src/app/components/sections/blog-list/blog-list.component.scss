@@ -1,0 +1,19 @@
+// import: Variable
+@import "../../../theme/scss/variables";
+
+section {
+  height: 100vh;
+  padding: 0 2rem;
+
+  .app-search-bar-class {
+    padding-top: 2.18rem;
+  }
+}
+
+.theme-light {
+  background-color: $bg-color-blog-list-light;
+}
+
+.theme-dark {
+  background-color: $bg-color-blog-list-dark;
+}

@@ -1,0 +1,6 @@
+<section [ngClass]="themeColor === 'dark' ? 'theme-dark' : 'theme-light'">
+  <div class="form-group">
+    <input type="text" [placeholder]="searchBoxPlaceHolder" />
+    <button (click)="onAddBlogPost()">{{ addBlogPostButton }}</button>
+  </div>
+</section>

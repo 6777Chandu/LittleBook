@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -7,17 +7,27 @@ import { BehaviorSubject } from 'rxjs';
 export class ColorThemesService {
   constructor() {}
 
-  colorTheme = new BehaviorSubject<string>('light');
+  colorTheme: BehaviorSubject<string> = new BehaviorSubject<string>('light');
 
-  fetchColorTheme() {
+  /**
+   * @description Fetches colorTheme
+   * @returns string with Current Color theme
+   */
+  fetchColorTheme(): string {
     return this.colorTheme.value;
   }
 
-  onChangeToDark() {
+  /**
+   * @description: Changes the ColorTheme to Dark
+   */
+  onChangeToDark(): void {
     this.colorTheme.next('dark');
   }
 
-  onChangeToLight() {
+  /**
+   * @description: Changes the ColorTheme to Light
+   */
+  onChangeToLight(): void {
     this.colorTheme.next('light');
   }
 }

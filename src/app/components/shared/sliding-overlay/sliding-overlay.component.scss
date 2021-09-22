@@ -1,0 +1,30 @@
+// Import : variables
+@import "../../../theme/scss/_variables.scss";
+
+.overlay-wrapper {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: $bg-overlay;
+  z-index: 50;
+
+  .theme-light {
+    background-color: $bg-sliding-overlay-light;
+  }
+  .theme-dark {
+    color: $font-color-theme-dark;
+    background-color: $bg-sliding-overlay-dark;
+  }
+
+  .overlay-slider {
+    position: absolute;
+    right: 0;
+    width: 35%;
+    height: 100vh;
+    padding: 3.125rem;
+  }
+  .animate__animated.animate__slideInRight,
+  .animate__animated.animate__slideOutRight {
+    --animate-duration: 0.5s;
+  }
+}

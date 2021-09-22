@@ -8,7 +8,8 @@ const envConfigFile = `
   
 export const environment = {
  production: false,
- HOSTS_LINK: '${process.env.HOSTS_LINK}',
+ HOST_BLOGS: '${process.env.HOST_BLOGS}',
+ HOST_MEMBERS: '${process.env.HOST_MEMBERS}',
 };
 `;
 writeFile(targetPath, envConfigFile, function (err) {

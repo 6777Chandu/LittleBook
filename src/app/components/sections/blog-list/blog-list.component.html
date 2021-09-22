@@ -1,0 +1,8 @@
+<section [ngClass]="themeColor === 'dark' ? 'theme-dark' : 'theme-light'">
+  <div class="app-search-bar-class">
+    <app-search-bar (addBlogPostEvent)="onAddBlogPost()"></app-search-bar>
+  </div>
+  <div class="app-blog-item-class">
+    <app-blog-item></app-blog-item>
+  </div>
+</section>

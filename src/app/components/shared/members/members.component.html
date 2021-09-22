@@ -1,0 +1,18 @@
+<section [ngClass]="themeColor === 'dark' ? 'theme-dark' : 'theme-light'">
+  <h2>Members</h2>
+  <div class="members-wrapper">
+    <div class="member" *ngFor="let member of members">
+      <img
+        src="https://jsonmockserver.vercel.app/{{
+          member.photo !== '' ? member.photo : '/images/users/1.jpeg'
+        }}"
+        [alt]="member.name"
+        appImageFallBack="google.png"
+      />
+      <h3>{{ member.name }}</h3>
+      <p>{{ member.company.location }}</p>
+    </div>
+    <!-- ./ member -->
+  </div>
+  <!-- ./ members-wrapper-->
+</section>

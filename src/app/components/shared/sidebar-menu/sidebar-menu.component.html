@@ -1,0 +1,11 @@
+<section>
+  <ul>
+    <li (click)="onViewMembers()">View Members</li>
+    <!-- //DONE: Use a Enum to denote Dark mode or light mode -->
+    <li
+      (click)="colorThemeTitle === darkThemeTitle ? onDarkMode() : onLightMode()"
+    >
+      Switch to {{ colorThemeTitle }}
+    </li>
+  </ul>
+</section>

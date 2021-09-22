@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { ApiService } from 'src/app/services/api/api.service';
 import { ColorThemesService } from 'src/app/services/color-themes/color-themes.service';
-
 
 @Component({
   selector: 'app-sidebar-container',
@@ -9,10 +9,18 @@ import { ColorThemesService } from 'src/app/services/color-themes/color-themes.s
   styleUrls: ['./sidebar-container.component.scss'],
 })
 export class SidebarContainerComponent implements OnInit {
-  constructor(private apiService: ApiService, private colorTheme:ColorThemesService) {}
-  items = [];
-  themeColor:string;
+  constructor(private colorTheme: ColorThemesService) {}
+
+  themeColor: string;
+  colorThemeSubscription: Subscription;
+
   ngOnInit(): void {
-    this.colorTheme.colorTheme.subscribe(data => this.themeColor = data )
+    this.colorThemeSubscription = this.colorTheme.colorTheme.subscribe(
+      (data) => (this.themeColor = data)
+    );
+  }
+
+  ngOnDestroy() {
+    this.colorThemeSubscription.unsubscribe();
   }
 }

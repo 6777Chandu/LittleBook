@@ -1,0 +1,63 @@
+// imports: variables
+@import "../../../theme/scss/variables";
+section {
+  display: grid;
+  justify-content: center;
+  h2 {
+    font: {
+      family: $font-headings;
+      size: 1.375rem;
+      weight: 500;
+    }
+    padding: 2.5rem 0;
+  }
+  .members-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-gap: 2.5rem 0.625rem;
+    .member {
+      img {
+        max-width: 10rem;
+        border-radius: 1.25rem;
+        border-bottom-left-radius: 0px;
+      }
+
+      h3 {
+        font: {
+          size: 1.1rem;
+          weight: 500;
+        }
+        padding: 1rem 0 0.3rem 0;
+      }
+      p {
+        font: {
+          size: 1rem;
+          weight: 400;
+        }
+      }
+    }
+  }
+}
+
+.theme-light {
+  .members-wrapper {
+    .member {
+      h3 {
+        color: $theme-color;
+      }
+    }
+  }
+}
+
+.theme-dark {
+  .members-wrapper {
+    .member {
+      h3 {
+        color: $font-color-theme-dark;
+      }
+      p {
+        color: $location-color-dark;
+      }
+    }
+  }
+}

@@ -1,20 +1,20 @@
 .wrapper {
   display: grid;
-  grid-template-columns: [app-sidebar-container] 15% [app-blog-lists] 2fr [app-blog-details] 3fr;
-  app-sidebar-container {
+  grid-template-columns: [app-sidebar-container] 15% [app-blog-list] 2fr [app-blog-details] 3fr;
+  .app-sidebar-container-class {
     grid-column: app-sidebar-container;
     position: fixed;
     width: 15%;
   }
-  app-blog-lists {
-    grid-column: app-blog-lists;
+  .app-blog-list-class {
+    grid-column: app-blog-list;
     flex: 2;
   }
 
-  app-blog-details {
+  .app-blog-details-class {
     grid-column: app-blog-details;
     flex: 3;
   }
 }
-// we never add styles directly to component tags
-// Please add a div or section as parents and add the styling 
+// DONE: we never add styles directly to component tags
+// DONE: Please add a div or section as parents and add the styling

@@ -1,29 +1,29 @@
 // Import : Variables
-@import "../../../theme/scss/variables.scss";
+@import "../../../theme/scss/variables";
 
 section {
   display: grid;
   justify-content: center;
   height: 100vh;
-// Never assign styles to component tags. use div tags and give styles to them
-// Try to use rem in this exerise. 
-// Width/Height can also be in %,vh,vw
-// Padding and margin would be only in rem
-  app-logo {
-    margin-top: 50px;
+  // DONE: Never assign styles to component tags. use div tags and give styles to them
+  // DONE: Try to use rem in this exerise.
+  // DONE: Width/Height can also be in %,vh,vw
+  // DONE: Padding and margin would be only in rem
+  .app-logo-class {
+    margin-top: 3.125rem;
   }
-  app-filters {
+  .app-filter-class {
     align-self: center;
   }
-  app-sidebar-menu {
-    margin-bottom: 60px;
+  .app-sidebar-menu-class {
+    margin-bottom: 3.75rem;
     align-self: end;
   }
 }
 .theme-light {
-  background-color: #fff;
+  background-color: $bg-sidebar-light;
 }
 .theme-dark {
-  color: #fff;
+  color: $font-color-theme-dark;
   background-color: $bg-sidebar-dark;
 }
