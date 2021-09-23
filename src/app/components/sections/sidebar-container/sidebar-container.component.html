@@ -1,15 +1,19 @@
 <section [ngClass]="themeColor === 'dark' ? 'theme-dark' : 'theme-light'">
-  <!-- why app-logo-class ? Dont we usually give classnames as container and wrapper or section?  -->
-  <div class="app-logo-class">
+  <!-- START: LOGO WRAPPER -->
+  <div class="logo-wrapper">
     <app-logo></app-logo>
   </div>
-  <!-- ./app-logo-class-->
-  <div class="app-filter-class">
+  <!-- END: LOGO WRAPPER -->
+
+  <!-- START: FILTERS WRAPPER -->
+  <div class="filters-wrapper">
     <app-filters></app-filters>
   </div>
-  <!-- ./app-filters-class-->
-  <div class="app-sidebar-menu-class">
+  <!-- END: FILTERS WRAPPER -->
+
+  <!-- START: SIDEBAR MENU WRAPPER -->
+  <div class="sidebar-menu-wrapper">
     <app-sidebar-menu></app-sidebar-menu>
   </div>
-  <!-- ./app-sidebar-menu-class-->
+  <!-- END: SIDEBAR MENU WRAPPER -->
 </section>

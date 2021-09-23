@@ -13,8 +13,6 @@ export class AppComponent implements OnInit, OnDestroy {
   slidingOverlaySubscripition: Subscription;
 
   ngOnInit() {
-    // DONE: It is good to move this to a service. Use a behaviour subject to trigger opening of the modal;
-    //DONE: Always assign to subscripiton variable and unsubscribe it on ondestroy
     this.slidingOverlaySubscripition =
       this.slidingOverlay.showSlidingOverlay.subscribe(
         (data) => (this.showSlidingOverlay = data)

@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { members } from 'src/app/models/app.models';
+import { Members } from 'src/app/models/app.models';
 import { ApiService } from 'src/app/services/api/api.service';
 import { ColorThemesService } from 'src/app/services/color-themes/color-themes.service';
 import { environment } from 'src/environments/environment';
@@ -15,7 +15,7 @@ export class MembersComponent implements OnInit, OnDestroy {
     private apiService: ApiService,
     private colorTheme: ColorThemesService
   ) {}
-  members: members[] = [];
+  members: Members[] = [];
   themeColor: string;
   colorThemeSubscription: Subscription;
 

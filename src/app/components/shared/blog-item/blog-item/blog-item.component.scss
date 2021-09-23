@@ -1,0 +1,49 @@
+// Import: Variables
+@import "../../../../theme/scss/variables";
+
+.blog-items-wrapper {
+  .blog-item {
+    margin: 1.25rem 0;
+    padding: 2.2rem;
+    background-color: $blog-item-bg-light;
+    border-radius: 10px;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.08);
+    box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.08);
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      background-color: $blog-item-bg-hover-light;
+    }
+  }
+  .active {
+    background-color: $blog-item-bg-hover-light;
+  }
+  h2 {
+    font: {
+      family: $font-headings;
+      size: 1.25rem;
+      weight: 400;
+    }
+  }
+  h4 {
+    font: {
+      size: 0.875rem;
+      weight: 500;
+    }
+    padding: 0.75rem 0;
+    color: $theme-color;
+    text-transform: uppercase;
+  }
+  p {
+    display: -webkit-box;
+    font: {
+      size: 1.125rem;
+      weight: 400;
+    }
+    line-height: 1.75rem;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}

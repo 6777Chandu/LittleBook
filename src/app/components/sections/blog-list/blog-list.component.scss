@@ -2,11 +2,29 @@
 @import "../../../theme/scss/variables";
 
 section {
-  height: 100vh;
   padding: 0 2rem;
-
-  .app-search-bar-class {
+  padding-bottom: 1.875rem;
+  .search-bar-wrapper {
+    display: flex;
     padding-top: 2.18rem;
+    .search-bar-container {
+      flex: 1;
+      padding-bottom: 0.625rem;
+      margin-right: 1.25rem;
+    }
+    button {
+      width: 28%;
+      height: 3.75rem;
+      font: {
+        size: 1.25rem;
+        weight: 100;
+      }
+      color: $font-color-theme-dark;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 3.125rem;
+      background-color: $theme-color;
+    }
   }
 }
 

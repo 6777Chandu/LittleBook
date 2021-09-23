@@ -1,15 +1,27 @@
+<!-- START: SLIDING OVERLAY -->
 <app-sliding-overlay *ngIf="showSlidingOverlay"></app-sliding-overlay>
+<!-- END: SLIDING OVERLAY -->
 
+<!-- START: WRAPPER -->
 <div class="wrapper">
-  <!-- app-sidebar-container-class?? Why not just sidebar-container?? Lets discuss-->
-  <div class="app-sidebar-container-class">
+  <!-- DONE: app-sidebar-container-class?? Why not just sidebar-container?? Lets discuss-->
+
+  <!-- START: SIDEBAR WRAPPER -->
+  <div class="sidebar-wrapper">
     <app-sidebar-container></app-sidebar-container>
   </div>
-  <div class="app-blog-list-class">
+  <!-- END: SIDEBAR WRAPPER -->
+
+  <!-- START: BLOG LIST WRAPPER -->
+  <div class="blog-list-wrapper">
     <app-blog-list></app-blog-list>
   </div>
-  <div class="app-blog-details-class">
+  <!-- END: BLOG LIST WRAPPER -->
+
+  <!-- START: BLOG DETAILS WRAPPER -->
+  <div class="blog-details-wrapper">
     <app-blog-details></app-blog-details>
   </div>
+  <!-- END: BLOG DETAILS WRAPPER -->
 </div>
-<!-- ./ wrapper -->
+<!-- END: WRAPPER -->

@@ -1,8 +1,18 @@
 <section [ngClass]="themeColor === 'dark' ? 'theme-dark' : 'theme-light'">
-  <div class="app-search-bar-class">
-    <app-search-bar (addBlogPostEvent)="onAddBlogPost()"></app-search-bar>
+  <!-- START: SEARCH BAR WRAPPER -->
+  <div class="search-bar-wrapper">
+    <!-- START: SEARCH BAR CONTAINER -->
+    <div class="search-bar-container">
+      <app-search-bar></app-search-bar>
+    </div>
+    <!-- END: SEARCH BAR CONTAINER -->
+    <button (click)="onAddBlogPost()">{{ addBlogPostButton }}</button>
   </div>
-  <div class="app-blog-item-class">
+  <!-- END: SEARCH BAR WRAPPER -->
+
+  <!-- START: BLOG ITEM WRAPPER -->
+  <div class="blog-item-wrapper">
     <app-blog-item></app-blog-item>
   </div>
+  <!-- END: BLOG ITEM WRAPPER -->
 </section>

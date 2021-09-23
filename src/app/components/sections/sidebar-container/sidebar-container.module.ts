@@ -4,6 +4,7 @@ import { LogoComponent } from 'src/app/components/shared/logo/logo.component';
 import { FiltersComponent } from '../../shared/filters/filters.component';
 import { SidebarContainerComponent } from './sidebar-container.component';
 import { SidebarMenuComponent } from 'src/app/components/shared/sidebar-menu/sidebar-menu.component';
+import { SharedModule } from '../../shared/shared.module';
 
 
 @NgModule({
@@ -13,7 +14,7 @@ import { SidebarMenuComponent } from 'src/app/components/shared/sidebar-menu/sid
     FiltersComponent,
     SidebarMenuComponent,
   ],
-  imports: [CommonModule],
+  imports: [CommonModule, SharedModule],
   exports: [SidebarContainerComponent],
 })
 export class SidebarContainerModule {}

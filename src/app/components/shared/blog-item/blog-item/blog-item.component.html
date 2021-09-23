@@ -1,6 +1,17 @@
-<section>
-  <!-- ########## STILL IN PROGRESS -->
-  <div class="blog-item" *ngFor="let item of blogItems">
-    {{ item.title }}
+<!-- START: BLOG ITEMS WRAPPER -->
+<div class="blog-items-wrapper">
+  <!-- START: BLOG ITEM -->
+  <!-- <div class="blog-item" *ngFor="let item of blogItems | search: searchName"> -->
+  <div
+    class="blog-item"
+    *ngFor="let item of blogItems | search: searchName; let idx = index"
+    (click)="onBlogPost(idx)"
+    [ngClass]="{ active: id === idx }"
+  >
+    <h2>{{ item.title }}</h2>
+    <h4>{{ item.type }}</h4>
+    <p>{{ item.details }}</p>
   </div>
-</section>
+  <!-- END: BLOG ITEM -->
+</div>
+<!-- END: BLOG ITEMS WRAPPER -->
