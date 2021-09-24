@@ -10,7 +10,9 @@ import { environment } from 'src/environments/environment';
 })
 export class CheckboxComponent implements OnInit {
   constructor(private apiService: ApiService) {}
-
+  //This should have been a dumb component so that we can re use the component for anything other than filters.
+  //Add Input for label/value/checked/name
+  //Add output for capturing click/change of checked value 
   items: BlogPosts[] = [];
   itemFilters: string[] = [];
   itemFiltersHolder: string[] = [];

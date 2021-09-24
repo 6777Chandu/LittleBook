@@ -2,7 +2,8 @@
 <div class="blog-items-wrapper">
   <!-- START: BLOG ITEM -->
   <!-- <div class="blog-item" *ngFor="let item of blogItems | search: searchName"> -->
-  <div
+  <!-- //This was supposed to be a dumb component. The blog item should have been an input and the ngFor should have been in the bloglist -->
+    <div
     class="blog-item"
     *ngFor="let item of blogItems | search: searchName; let idx = index"
     (click)="onBlogPost(idx)"

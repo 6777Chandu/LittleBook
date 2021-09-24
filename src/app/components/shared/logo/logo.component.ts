@@ -15,6 +15,7 @@ export class LogoComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.colorThemeSubscripition = this.colorTheme.colorTheme.subscribe(
       (data) => {
+        // Use Enum for theme
         this.themeColor = data === 'dark' ? 'logo_dark' : 'logo-light';
       }
     );
